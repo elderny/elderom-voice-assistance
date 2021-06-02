@@ -1,2 +1,35 @@
 # elderom-voice-assistance
-Before Starting My AI, goto cmd and type these codes   Type every code one at a time  ____________________________ pip install pyttsx3  ____________________________ pip install speech_recognition as sr  ____________________________ pip install wikipedia  ____________________________ pip install webbrowser  ____________________________ pip install os  ____________________________ pip install smtplib  ____________________________ pip install pyjokes  ____________________________ pip install pywin  ____________________________ pywin install PyAudio  ____________________________
+
+Before Starting My AI, goto cmd and type these codes
+
+
+Type every code one at a time
+
+____________________________
+pip install pyttsx3
+
+____________________________
+pip install speech_recognition as sr
+
+____________________________
+pip install wikipedia
+
+____________________________
+pip install webbrowser
+
+____________________________
+pip install os
+
+____________________________
+pip install smtplib
+
+____________________________
+pip install pyjokes
+
+____________________________
+pip install pywin
+
+____________________________
+pywin install PyAudio
+
+____________________________
