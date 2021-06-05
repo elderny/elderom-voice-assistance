@@ -12,12 +12,13 @@ engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
 
+hour = int(datetime.datetime.now().hour)
+
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
 
 def wishMe():
-    hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour<12:
         print("Good Morning!")
         speak("Good Morning!")
@@ -25,9 +26,9 @@ def wishMe():
     elif hour >= 12 and hour <18:
         print("Good Afternoon!")
         speak("Good Afternoon! ")
-    # else:
-    #     print("Good Evening!")
-    #     speak("Good Evening!")
+    else:
+        print("Good Evening!")
+        speak("Good Evening!")
     print("I am Eldrom, made by elderny1 from telegram please tell me how may i help you\n")
     speak("I am Eldrom, made by elderny1 from telegram please Tell me how may i help you")
 
