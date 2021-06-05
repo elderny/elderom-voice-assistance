@@ -25,10 +25,9 @@ def wishMe():
     elif hour >= 12 and hour <18:
         print("Good Afternoon!")
         speak("Good Afternoon! ")
-
-    else:
-        print("Good Evening!")
-        speak("Good Evening!")
+    # else:
+    #     print("Good Evening!")
+    #     speak("Good Evening!")
     print("I am Eldrom, made by elderny1 from telegram please tell me how may i help you\n")
     speak("I am Eldrom, made by elderny1 from telegram please Tell me how may i help you")
 
@@ -63,7 +62,6 @@ def sendEmail(to, content):
     server.starttls()
     server.login(b, a)
     server.sendmail(b, to, content)
-
 if __name__ == "__main__":
     wishMe()
     while True:
@@ -81,8 +79,6 @@ if __name__ == "__main__":
         elif 'how are you' in query:
             speak("I'm good as i'm made by elderny. Hmmmmmm")
 
-        elif 'stop' in query or 'stop it' in query or 'stop yourself' in query:
-            speak("Sorry, Im stopped now")
 
         elif 'thanks eldrom' in query or 'eldrom' in query or 'eldrom listen' in query or 'eldrom hi' in query:
             speak("I'm here with you master")
@@ -93,7 +89,7 @@ if __name__ == "__main__":
         elif 'tell me a joke' in query or 'i want a joke' in query or 'speak a joke' in query or 'tell any joke' in query or 'tell me a joke again' in query:
             speak(pyjokes.get_joke())
 
-        elif 'why you' in query or 'look at you' in query:
+        elif 'why you' in query or 'look at you' in query or 'why are you' in query:
             speak("What the fuck, you got no manners you want to get hacked? type hack me if yes")
             print("Type hack me to continue")
             ask = input().lower()
@@ -142,17 +138,18 @@ if __name__ == "__main__":
             speak("Opening github for you my master")
             webbrowser.open("github.com")
 
-        elif 'play lofi music' in query or 'lofi music' in query or 'lofi music' in query:
+        elif 'play lofi music' in query or 'lofi music' in query or 'lofi music' in query or 'lofi' in query:
             speak("Playing lofi music online, time to chill")
             webbrowser.open("https://www.youtube.com/watch?v=DWcJFNfaw9c")
 
-        elif 'play music' in query or 'play pc music' in query or 'play saved music' in query:
-            music_dir = 'C:\\Users\\Elderny\\Desktop\\Songs'
-            songs = os.listdir(music_dir)
-            print(songs)
-            os.startfile(os.path.join(music_dir, random.choice(songs)))
+#         You need to have that folder otherwise it will throw error
+#         elif 'play music' in query or 'play pc music' in query or 'play saved music' in query:
+#             music_dir = 'C:\\Users\\Elderny\\Desktop\\Songs'
+#             songs = os.listdir(music_dir)
+#             print(songs)
+#             os.startfile(os.path.join(music_dir, random.choice(songs)))
 
-        elif 'my favourite song' in query or 'play my favourite song' in query or 'favourite song' in query:
+        elif 'my favourite song' in query or 'play song' in query or 'play any song' in query or 'play my favourite song' in query or 'favourite song' in query:
             webbrowser.open("https://www.youtube.com/watch?v=Mlq9jrXbEFo")
             speak("Music windows opened, master elderny")
             speak("Press enter to let me listen again hehe, guru")
@@ -191,3 +188,6 @@ if __name__ == "__main__":
                 print(e)
                 speak("Sorry my friend elderny, I'm not able to send this")
         print("\nI'm Listening AGAIN!")
+
+        if 'stop' in query or 'stop it' in query or 'stop yourself' in query:
+            speak("Sorry, Im stopped now, press enter to resume me")
